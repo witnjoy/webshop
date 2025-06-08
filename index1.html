@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Пъзели и настолни игри</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f6f6f6; color: #333; }
+    header { background: #ff6600; color: white; padding: 1em; }
+    nav { background: #333; color: white; display: flex; justify-content: center; gap: 2em; padding: 0.5em; }
+    nav a { color: white; text-decoration: none; }
+    .container { max-width: 1200px; margin: 2em auto; padding: 1em; background: white; border-radius: 8px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5em; }
+    .product { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1em; text-align: center; }
+    .product img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 4px; }
+    footer { background: #333; color: white; text-align: center; padding: 1em; margin-top: 2em; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Магазин за Пъзели и Игри</h1>
+  </header>
+
+  <nav>
+    <a href="#">Начало</a>
+    <a href="#">Пъзели</a>
+    <a href="#">Игри</a>
+    <a href="#">Контакт</a>
+  </nav>
+
+  <div class="container">
+    <h2>Каталог</h2>
+    <div class="grid" id="product-grid">
+      <!-- JavaScript ще вмъкне продуктите тук -->
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Магазин за Пъзели. Всички права запазени.
+  </footer>
+
+  <script>
+    const products = [
+      { img: "klotski_boy_01.jpg", name: "Клотски пъзел - Спаси детето", size: "8x9.6 см", price: "8.20 лв." },
+      { img: "klotski_fly_01.jpg", name: "Клотски пъзел - Спаси мухата", size: "8x9.6 см", price: "8.20 лв." },
+      { img: "klotski_fish.jpg", name: "Клотски пъзел - Спаси водолаза", size: "8x9.6 см", price: "8.20 лв." },
+      { img: "Klotski_starwars_01.jpg", name: "Клотски пъзел - Star Wars", size: "8x9.6 см", price: "12.10 лв." },
+      { img: "klotski_china.jpg", name: "Клотски пъзел - Императорски", size: "8x9.6 см", price: "12.10 лв." },
+      { img: "tangram_double_01.jpg", name: "Tangram - Double puzzle", size: "11x11 см", price: "7.50 лв." },
+      { img: "tangram_01.jpg", name: "Tangram puzzle", size: "11x11 см", price: "7.50 лв." },
+      { img: "stoikagsm_01.jpg", name: "Стойка за GSM", size: "8x13 см", price: "9.80 лв." },
+      { img: "vikingchess_01.jpg", name: "Викинг шах - HNEFATAFL", size: "24x24 см", price: "15.90 лв." },
+      { img: "Hexagon_Puzzle_01.png", name: "Hexagon - пъзел", size: "10x10 см", price: "12.00 лв." },
+      { img: "Edinburgh_map.jpg", name: "Карта на Единбург", size: "32x24 см", price: "42.30 лв." },
+      { img: "Codenames2.jpg", name: "Дъска за играта CODENAMES", size: "38x26 см", price: "15.90 лв." },
+      { img: "puzzle1.jpg", name: "Египетски иероглифи - пъзел", size: "15x12 см", price: "9.10 лв." },
+      { img: "superhiros.jpg", name: "Супергерои - пъзел", size: "15x12 см", price: "9.10 лв." },
+      { img: "frog 01.jpg", name: "Жабчето - картина", size: "17x24 см", price: "10.20 лв." },
+    ];
+
+    const grid = document.getElementById('product-grid');
+
+    products.forEach(product => {
+      const div = document.createElement('div');
+      div.className = 'product';
+      div.innerHTML = `
+        <a href="${product.img}" target="_blank">
+		<img src="${product.img}" alt="${product.name}">
+		</a>
+        <h3>${product.name}</h3>
+        <p>Размер: ${product.size}</p>
+        <p>Цена: ${product.price}</p>
+      `;
+      grid.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>
