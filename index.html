@@ -14,7 +14,14 @@
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5em; }
     .product { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 1em; text-align: center; }
     .product img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 4px; }
+	.explain {
+  font-size: 0.65em;
+  color: #555;
+  display: block;
+  margin-top: 0.5em;
+}
     footer { background: #333; color: white; text-align: center; padding: 1em; margin-top: 2em; }
+	
   </style>
 </head>
 <body>
@@ -38,20 +45,20 @@
   </div>
 
   <footer>
-    &copy; 2025 Магазин за Пъзели. Всички права запазени.
+    &copy; 2025 Магазин за Пъзели. Всички права запазени.0888420127
   </footer>
 
   <script>
     const products = [
-      { img: "klotski_boy_01.jpg", name: "Клотски пъзел - Спаси детето", size: "8x9.6 см", price: "9.00 лв." , code: "P001"},
-      { img: "Klotski_fly_01.jpg", name: "Клотски пъзел - Спаси мухата", size: "8x9.6 см", price: "9.00 лв." , code: "P002"},
-      { img: "klotski_fish.jpg", name: "Клотски пъзел - Спаси водолаза", size: "8x9.6 см", price: "9.00 лв." , code: "P003"},
-      { img: "klotski_starwars_01.jpg", name: "Клотски пъзел - Star Wars", size: "8x9.6 см", price: "12.00 лв." , code: "P004"},
-      { img: "klotski_china.jpg", name: "Клотски пъзел - Императорски", size: "8x9.6 см", price: "12.00 лв." , code: "P005"},
-      { img: "doubl_tangram_02.jpg", name: "Tangram - Double puzzle", size: "11x11 см", price: "9.00 лв." , code: "P006"},
-      { img: "tangram_01.jpg", name: "Tangram puzzle", size: "11x11 см", price: "8.00 лв." , code: "P007"},
-      { img: "stoikagsm_01.jpg", name: "Стойка за GSM", size: "8x13 см", price: "10.00 лв." , code: "S008"},
-      { img: "vikingchess_01.jpg", name: "Викинг шах - HNEFATAFL", size: "24x24 см", price: "16.00 лв." , code: "G009"},
+      { img: "klotski_boy_01.jpg", name: "Клотски пъзел - Спаси детето", size: "8x9.6 см", price: "9.00 лв." , code: "P001", explain: "Ученикът е заобиколен от много опасности. Преведи го през тях до спасителната пешеходна пътека."},
+      { img: "Klotski_fly_01.jpg", name: "Клотски пъзел - Спаси мухата", size: "8x9.6 см", price: "9.00 лв." , code: "P002", explain: "Запази мухата  от надвисналите над нея заплахи, като я отведеш до спасителния отвор към свободата."},
+      { img: "klotski_fish.jpg", name: "Клотски пъзел - Спаси водолаза", size: "8x9.6 см", price: "9.00 лв." , code: "P003", explain: "Дълбоко в морските дълбини водолазът е завършил своята мисия, сега е твой ред да го заведеш до батискафа."},
+      { img: "klotski_starwars_01.jpg", name: "Клотски пъзел - Star Wars", size: "8x9.6 см", price: "12.00 лв." , code: "P004", explain: "Yoda - помогни му да стигне до портала и нека Силата да бъде с теб!"},
+      { img: "klotski_china.jpg", name: "Клотски пъзел - Императорски", size: "8x9.6 см", price: "12.00 лв." , code: "P005", explain: "华容道 (Huá Róng Dào) буквално означава „Пътят на Хуажун“ – препратка към известен исторически епизод от класическия китайски роман Троецарствието. В тази история генерал Цао Цао е заобиколен с врагове и с помощта на своите верни войни , трябва да премине през тесен планински проход и да се изведе през отвора в дъската."},
+      { img: "doubl_tangram_02.jpg", name: "Tangram - Double puzzle", size: "11x11 см", price: "9.00 лв." , code: "P006", explain: "Двустранен Монтесори пъзел с две форми - сърце и правоъгълник."},
+      { img: "tangram_01.jpg", name: "Tangram puzzle", size: "11x11 см", price: "8.00 лв." , code: "P007", explain: "Класически Монтесори пъзел , който прдлага развие фантазията на децата , като им дава възможносттада създават форми на животни, растения и човечета."},
+      { img: "stoikagsm_01.jpg", name: "Стойка за GSM", size: "8x13 см", price: "10.00 лв." , code: "S008", explain: "Стойка с формата на статив за рисуване - удобство при дългите телефонни разговори с любими хора."},
+      { img: "vikingchess_01.jpg", name: "Викинг шах - HNEFATAFL", size: "24x24 см", price: "16.00 лв." , code: "G009", explain: "Викингски шах (Hnefatafl) е древна стратегическа игра, играна от скандинавците преди повече от 1000 години за 2 играчи - в неравностойна битка: Единият контролира царя и неговите защитници, а другият – нападащата армия. Целта на царя е да избяга до ъглите на дъската, а целта на нападателя – да го залови, като го обгради от всички страни. Играта е пълна с тактика, засада и стратегически ходове – истинско предизвикателство за ума, вдъхновено от духа на викингските битки."},
       { img: "Hexagon_Puzzle_01.png", name: "Hexagon - пъзел", size: "10x10 см", price: "6.00 лв." , code: "P010"},
       { img: "Edinburgh_map.jpg", name: "Карта на Единбург", size: "32x24 см", price: "48.00 лв." , code: "S011"},
       { img: "Codenames2.jpg", name: "Дъска за играта CODENAMES", size: "38x26 см", price: "16.00 лв." , code: "G012"},
@@ -70,13 +77,14 @@
 		<img src="${product.img}" alt="${product.name}">
 		</a>
         <h3>${product.name}</h3>
-        <p>Размер: ${product.size}</p>
-        <p>Цена: ${product.price}</p>
-		<p>Код: ${product.code}</p>
+        </br>Размер: ${product.size}
+        </br>Цена: ${product.price}
+		</br>Код: ${product.code}
+		</br><span class="explain"><u>Описание:</u> ${product.explain}</span></br>
       `;
       grid.appendChild(div);
     });
   </script>
-
+	
 </body>
 </html>
