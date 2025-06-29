@@ -1,3 +1,4 @@
 ﻿User-agent: *
 Allow: /
+
 Sitemap: https://witnjoy.github.io/webshop/sitemap.xml
